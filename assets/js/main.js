@@ -5,13 +5,13 @@ var App = {
 
     videoDownload : function(e){
         e.preventDefault;
-        var url = $(this).find('[name=address]').val();
+        var url = $(this).find('[name=address]');
         var btn = $('#btn-submit-form');
         
         if(!btn.attr('disabled') !== undefined){
             $.ajax({
                 url      : 'protected/getVideo.php',
-                data     : { address : url },
+                data     : { address : url.val() },
                 type     : 'POST',
                 dataType : 'json',
                 beforeSend : function(){
@@ -26,6 +26,7 @@ var App = {
                 }
             }).always(function () {
                 btn.button('reset');
+                url.val('');
             });
         }
         return false;

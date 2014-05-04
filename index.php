@@ -2,8 +2,10 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>Youtube Downloader</title>
+        <title>YTB Download</title>
         
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
@@ -13,8 +15,7 @@
         <div class="content">
             <div class="col-xs-6 col-xs-offset-3">
 
-                <h1>Youtube Mp3 Downloader</h1>
-                
+                <h1>YTB Download</h1>
                 <form role="form" class="main-form" id="downloadVideo">
                     <div class="form-group">
                         <label for="address">Url do vídeo</label>
