@@ -1,4 +1,6 @@
-body{
-    background-image: url('../images/jigglypuff.gif');
-    background-repeat: no-repeat;
+@media (min-width: 992px) {
+    body{
+        background-image: url('../images/jigglypuff.gif');
+        background-repeat: no-repeat;
+    }
 }

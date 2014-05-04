@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="content">
-            <div class="col-xs-6 col-xs-offset-3">
+            <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
 
                 <h1>YTB Download</h1>
                 <form role="form" class="main-form" id="downloadVideo">
@@ -23,8 +23,20 @@
                     </div>
                     <button type="submit" class="btn btn-default" data-loading-text="Convertendo..." id="btn-submit-form"><i class="glyphicon glyphicon-download-alt"></i> Baixar</button>
                 </form>            
+                <footer>
+                    <hr>
+                    <p>
+                        Copyright &copy; <?php echo date('Y') ?> by Ícaro Heimig.<br>
+                        All Rights Reserved.<br>
+                        Powered by 
+                        <a href="http://getbootstrap.com" target="_blank">Twitter Bootstrap</a>,
+                        <a href="https://github.com/icaromh2/ytb-download" target="_blank">GitHub</a>
+                    </p>  
+                </footer>
             </div>
+
         </div>
+
         <!-- Scripts  -->
         <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
