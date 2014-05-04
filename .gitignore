@@ -1,2 +1,2 @@
-musics/*.mp4
-!tmp/.htaccess
+musics/*.mp3
+tmp/*.m4a

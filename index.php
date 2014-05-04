@@ -20,7 +20,7 @@
                         <label for="address">Url do vídeo</label>
                         <input type="text" class="form-control" id="address" name="address" placeholder="https://www.youtube.com/watch?v=zo0OccO5_qU" >
                     </div>
-                    <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-download-alt"></i> Baixar</button>
+                    <button type="submit" class="btn btn-default" data-loading-text="Convertendo..." id="btn-submit-form"><i class="glyphicon glyphicon-download-alt"></i> Baixar</button>
                 </form>            
             </div>
         </div>
