@@ -10,12 +10,19 @@
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+        <meta property="og:image" content="assets/images/youtube_mp3.jpg" />
+        <meta property="og:title" content="YTB Download"/>
+        <meta property="og:site_name" content="YTB Download"/>
     </head>
     <body>
         <div class="content">
             <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
 
                 <h1>YTB Download</h1>
+                <p class="alert alert-info">
+                    Insira a url do vídeo e receba o audio em mp3
+                </p>
                 <form role="form" class="main-form" id="downloadVideo">
                     <div class="form-group">
                         <label for="address">Url do vídeo</label>
