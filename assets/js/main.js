@@ -7,7 +7,7 @@ var App = {
         e.preventDefault;
         var url = $(this).find('[name=address]');
         var btn = $('#btn-submit-form');
-        
+
         if(!btn.attr('disabled') !== undefined){
             $.ajax({
                 url      : 'protected/getVideo.php',
@@ -33,7 +33,7 @@ var App = {
     },
 
     videoRedirect : function(music){
-        window.location.href = 'get.php?m=' + music;
+        window.location.href = 'musics/' + music;
     }
 };
 $(App.init);
