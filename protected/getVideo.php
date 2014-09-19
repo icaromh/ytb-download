@@ -12,7 +12,7 @@ if(isset($_POST['address']) && !empty($_POST['address'])):
     }
 
     $res = exec('./youtubeDown.sh ' . $url);
-    $res = urlencode($res);
+//    $res = urlencode($res);
     echo json_encode(array('success' => true, 'url' => $res));
     exit;
 else:
