@@ -12,16 +12,15 @@ if [[ $address =~ $regex ]]; then
     musicFolder="../musics"
     finalFile="$musicFolder/$video_title.mp3"
     # echo "Baixando $video_title"
-    youtube-dl -o "$tmpFolder/%(id)s.%(ext)s" --extract-audio --audio-format m4a $address --youtube-skip-dash-manifest --no-check-certificate
+    youtube-dl -o "$tmpFolder/%(id)s.%(ext)s" --extract-audio --audio-format m4a $address --no-check-certificate
 
     # echo "Convertendo para Mp3"
     # ffmpeg -i "$video_id.m4a" "$video_title.mp3"
 
-if [ ! -f "$finalFile" ]; then
-	avconv -i "$tmpFolder/$video_id.m4a" "$musicFolder/$video_title.mp3"
+    if [ ! -f "$finalFile" ]; then
+	avconv -i "$tmpFolder/$video_id.m4a" "$finalFile"
 	rm "$tmpFolder/$video_id.m4a"
-	echo "$video_title.mp3"
-fi
+    fi
     # echo "Removendo audio"
     echo "$video_title.mp3"
 
