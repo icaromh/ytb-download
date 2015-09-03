@@ -10,16 +10,21 @@ if [[ $address =~ $regex ]]; then
     video_title="$(youtube-dl --get-title $address)"
     tmpFolder="../tmp"
     musicFolder="../musics"
+    finalFile="$musicFolder/$video_title.mp3"
     # echo "Baixando $video_title"
-    youtube-dl -o "$tmpFolder/%(id)s.%(ext)s" --extract-audio --audio-format m4a $address
-    
+    youtube-dl -o "$tmpFolder/%(id)s.%(ext)s" --extract-audio --audio-format m4a $address --youtube-skip-dash-manifest --no-check-certificate
+
     # echo "Convertendo para Mp3"
     # ffmpeg -i "$video_id.m4a" "$video_title.mp3"
-    avconv -i "$tmpFolder/$video_id.m4a"  "$musicFolder/$video_title.mp3"
+
+if [ ! -f "$finalFile" ]; then
+	avconv -i "$tmpFolder/$video_id.m4a" "$musicFolder/$video_title.mp3"
+	rm "$tmpFolder/$video_id.m4a"
+	echo "$video_title.mp3"
+fi
     # echo "Removendo audio"
-    rm "$tmpFolder/$video_id.m4a"
-    
     echo "$video_title.mp3"
-else 
-    echo "Desculpe, mas houve algum problema." 
+
+else
+    echo "Desculpe, mas houve algum problema."
 fi
